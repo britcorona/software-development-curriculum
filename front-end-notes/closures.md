@@ -2,16 +2,17 @@
 Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created.
 ## Example
 A closure is a function having access to the parent scope, even after the parent function has closed.
-* var add = (function () {
-    var counter = 0;
-    return function () {return counter += 1;}
-})();
 
-add();
-add();
-add();
+var add = (function () { <br>
+    var counter = 0; <br>
+    return function () {return counter += 1;}<br>
+})();<br>
 
-// the counter is now 3
+add();<br>
+add();<br>
+add();<br>
+
+ //the counter is now 3 
 
 * The variable add is assigned the return value of a self-invoking function.
 * The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.
